@@ -1,6 +1,48 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %}Home{% endblock title %}
+
+{% block carousel %}
+<div id="carouselExample" class="carousel slide">
+    <div class ="carousel-inner"z-index=5>
+        <div class="carousel-item active">
+            <img src="{% static 'images/bimages/bi3.jpg' %}" class="d-block w-100" alt="carousel">
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'images/bimages/bi1.jpg' %}" class="d-block w-100" alt="carousel">
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'images/bimages/bi2.jpg' %}" class="d-block w-100" alt="carousel">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+{% endblock carousel %}
+
+{% block information %}
+<div class="container">
+    <div class="row bg-success text-center p-5 text-white border-bottom shadow">
+        <h1>Cake Wala</h1>
+        <small class="fs-5">
+            Cakes are delightful desserts enjoyed worldwide, often flavored with chocolate, vanilla, or fruit. 
+            They come in various types, from fluffy sponge cakes to rich cheesecakes and multi-layered delights. 
+            Cakes are a centerpiece for celebrations like birthdays and weddings, decorated with frosting, fondant, or edible designs. 
+            Some cakes have unique fillings like creams, jams, or nuts, adding extra flavor. 
+            With endless variations, from traditional to modern fusion cakes, they continue to be a symbol of joy and indulgence.
+        </small>
+    </div>
+</div>
+{% endblock information %}
+
 {% block main-content %}
-    <h1>Welcome to...Fluffy Delights</h1>
+<div class="container">
+    <h1>Fluffy Delights</h1>
+</div>
 {% endblock main-content %}
