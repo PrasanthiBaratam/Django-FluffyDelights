@@ -1,6 +1,14 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.views import generic
+from django.contrib.auth.forms import UserCreationForm
+from django.urls import reverse_lazy
+from django.contrib.auth.views import LoginView
 
-def login_view(request):
-    return render(request, 'authentication/login.html')  # Ensure this template exists
-def register_view(request):
-    return render(request,'authentication/registration.html')
+class UserRegisterView(generic.CreateView):
+    form_class = UserCreationForm
+    template_name = 'registration.html'
+    success_url = reverse_lazy('signin') # to redirect to the given page after signup is done.
+
+# inheriting the LoginView class
+class Login(LoginView):
+    template_name = 'login.html'

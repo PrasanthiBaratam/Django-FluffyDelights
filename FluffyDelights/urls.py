@@ -23,12 +23,13 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include("mainapp.urls")),
-    path('auth/', include('authentication.urls')),
+    path('authentication/', include('authentication.urls')),
 ]
 
 
 # Serve media files in development
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
 
 
