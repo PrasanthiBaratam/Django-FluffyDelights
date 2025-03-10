@@ -5,7 +5,7 @@ from django.conf import settings
 
 
 urlpatterns = [
-    path('', views.home),
+    path('', views.home,name='home'),
     path('products/', views.products, name='products'),
     path('search/', views.prod_search, name='prod_search'),
     path('products/', views.product_view, name='prod_page'),

@@ -59,7 +59,7 @@ class AddProduct(CreateView):
     fields = [ # specifying the fields to be generated in the form
         'name',
         'price',
-        'desc',
+        'description',
         'stock',
         'pic'
     ]
